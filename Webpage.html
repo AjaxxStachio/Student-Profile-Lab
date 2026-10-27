@@ -1,0 +1,270 @@
+<!---
+File Name:      Webpage.html
+Student Name:   Ajani Scarlett
+Student ID:     2302995
+Assignment:     2302995_Student_Profile_Lab
+Due Date:       30/10/2026
+-->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name=""viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Web Programming - LAB 3</title>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: rgb(202, 203, 243);
+                margin: 30px;
+                margin-right: 20px;
+                padding-bottom: 15px;
+            }
+            /*Header Section*/
+            header{
+                border-bottom: 2px;
+                margin-left: 5px;
+
+            }
+            /*Navigation Section*/
+            nav{
+                gap: 2px;
+            }
+            /*Descendant*/
+            nav ul{
+                animation: pulse 1s infinite ease-in;
+                
+            }
+           
+       
+            /*About Me Section*/
+            .about-me-card{
+                background-color: rgb(140, 196, 233);
+                padding: 1.5px;
+                border-radius: 20px;
+                border-right: 30px;
+                max-width: fit-content;
+                max-height: fit-content;
+
+            }
+            .about-me-text{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                margin-left: 30px;
+                border-left: 20px;
+
+            }
+            .student-name{
+                font-size: 20px;
+                font-style:bold;
+                color:rgb(0, 0, 0);
+                margin-bottom: 2px;
+                padding-bottom:20px;
+
+            }
+            .programme {
+                color: #000000;
+                font-style: bold;
+                font-display: block;
+             }
+            .image{
+                text-align: left;
+            }
+           
+            .image img{
+                width: 140px;
+                height: 140px;
+                border-radius: 40px;
+
+            }
+           
+            /*ID Selector*/
+            #p1{
+                font-style: italic;
+                margin-top: 10px;
+            }
+            /*Course Section*/
+            .course-card{
+                background-color: rgb(145, 184, 241);
+                padding-bottom: 25px;
+                border: 40px;  
+                max-width: 400px;
+                max-height: fit-content;
+                border-radius: 20px;
+                padding: 15px;
+            }
+            .course-text{
+                font-style: black;
+                font-family:'Courier New', Courier, monospace;
+                font-weight: 500;
+            }
+
+            /*Schedule Section*/
+            .table{
+                width: 100;
+                border-spacing: 15px;
+             
+
+            }
+            .table th,.table td{
+                padding: 15px;
+                text-align: center;
+            }
+
+            /*Contact Section*/
+            .form-layout{
+                padding: 30px;
+                border-radius: 20px;
+                max-width: 700px;
+                max-height: 900px;
+            }
+            .form-section{
+                margin: 20px;
+            }
+            .form-card{
+                background-color: rgb(146, 196, 244);
+                padding-bottom: 25px;
+                border: 40px;  
+                max-width: fit-content;
+                max-height: fit-content;
+            }
+           
+            /*Footer Section*/
+            footer{
+                text-align: center;
+                font-size: small;
+                  
+            }
+            p#p2, p#p3{
+                display: none;
+                background-color: rosybrown;
+                padding: 3px;
+            }/* Child Selector*/
+            div > p#p3{
+                display:none;
+                background-color: blueviolet;
+                border-radius: 20px;
+                
+            }
+            /*Pseudo*/
+            div:hover p#p2{
+                display: block;
+            }
+
+            div:hover p#p3{
+                display: block;
+            }
+            .container{
+                width: 1080px;
+                display: flex;
+            }
+            @media screen and (max-width: 760px) {
+                .container{
+                    width: 100%;
+                    flex-direction: column;
+                }
+                .sidebar{
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+             <div id="home">
+                <h1>University of Technology</h1>
+                <h2>Web Programming</h2>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#home"> Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="about">
+            <h2>About Me</h2>
+            <div class="about-me-card">
+                <div class="about-me-text">
+                    <div class="image">
+                        <img id="img1" src="IMG20250219193521[1].jpg" alt="Self Portrait">
+                    </div>
+                    <span class="student-name">Ajani Scarlett</span> 
+                    <div class="programme"></span>BSc Computer Network and Security, Major Cybersecurity</div>
+                    <p><h3>Bio:</h3> I am a perpetual learner, I enjoy taking on new tasks, and challenging myself to always improving</p>
+                    <p id="p1">I enjoy solving CTF challenges. When I'm not scripting, I'm either watching a show or practicing my photography.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="courses">
+            <h2>My Courses</h2>
+            <div class="course-card">
+               <div class="course-text">
+                <h3>Classes currently being done</h3>
+                 <ul> 
+                    <li>Web Programming</li>
+                    <li>Professional Seminar</li>
+                    <li>IT Project Management</li>
+                    <li>Software and System Security</li>
+                    <li>Major Project</li>
+                </ul>
+               </div>
+            </div>
+        </div>
+
+        <div id="week-schedule">
+            <h2>Weekly Schedule</h2>
+            <table class="table" style="background-color: rgb(236, 183, 119);">
+                <tr>
+                    <th>Course Name</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Web Programming</td>
+                    <td>6pm - 8:50pm</td>
+                </tr>
+                <tr>
+                    <td>Software and System Security</td>
+                    <td>5pm - 5:50pm</td>
+                </tr>
+                <tr>
+                    <td>IT Project Management</td>
+                    <td>5pm - 6:50pm</td>
+                </tr>
+            </table>
+        </div>
+
+       <div id="contact">
+        <h2>Contact Me</h2>
+        <div class="form-card">
+            <form class="form-layout" action="#" method="post">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Mary Jane" required><br><br>
+                <span id="p2">What is your gender?</span><br>
+                <label for="gender">Male</label>
+                <input type="checkbox" id="gender" value="male" required>
+                <label for="male">Female</label>
+                <input type="checkbox" id="gender" value="female" required><br><br>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required><br><br>
+                <label for="message">Message</label>
+                <textarea type="message" id="message" name="message" placeholder="Please enter your message......" required></textarea><br>    </div>    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <footer>
+            <div>HOVER HERE !!! 
+                
+                <p id="p2">Ajani Scarlett 2026, University of Technology</p>
+                <p id="p3">All rights reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
